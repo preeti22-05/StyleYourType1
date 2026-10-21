@@ -2,8 +2,13 @@ import axios from 'axios';
 
 axios.defaults.withCredentials = true; // Enable cookies for authentication
 
-// Use localhost for development
-const API_URL = 'http://localhost:5000/api'; // Replace with your backend URL
+const configuredApiHost = process.env.REACT_APP_API_URL;
+const API_HOST = configuredApiHost
+  ? /^https?:\/\//i.test(configuredApiHost)
+    ? configuredApiHost
+    : `https://${configuredApiHost}`
+  : 'http://localhost:5000';
+export const API_URL = `${API_HOST.replace(/\/+$/, '')}/api`;
 
 // Signup API
 export const signup = async (data) => {

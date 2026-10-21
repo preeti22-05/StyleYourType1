@@ -7,6 +7,7 @@ import background from './media/back.mp4';
 import './event.css';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { API_URL } from '../api';
 
 const EventSelection = () => {
   const [eventType, setEventType] = useState('');
@@ -30,7 +31,7 @@ const EventSelection = () => {
     setLoading(true);
     try {
       const response = await axios.post(
-        'http://localhost:5000/api/auth/select-event',
+        `${API_URL}/auth/select-event`,
         { eventType },
         { withCredentials: true }
       );

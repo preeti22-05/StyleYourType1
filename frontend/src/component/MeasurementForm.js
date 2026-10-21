@@ -8,6 +8,7 @@ import { Divider } from 'primereact/divider';
 import { Steps } from 'primereact/steps';
 import background from './media/back.mp4';
 import './measurement.css';
+import { API_URL } from '../api';
 
 const MeasurementForm = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -47,7 +48,7 @@ const MeasurementForm = () => {
     setLoading(true);
     try {
       const response = await axios.post(
-        'http://localhost:5000/api/auth/save-measurements', 
+        `${API_URL}/auth/save-measurements`,
         measurements, 
         { withCredentials: true }
       );

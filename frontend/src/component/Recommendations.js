@@ -6,6 +6,7 @@ import { Divider } from 'primereact/divider';
 import { DataView } from 'primereact/dataview';
 import background from './media/back.mp4';
 import './recommendations.css';
+import { API_URL } from '../api';
 
 const Recommendations = () => {
   const [recommendations, setRecommendations] = useState([]);
@@ -17,13 +18,13 @@ const Recommendations = () => {
     const fetchData = async () => {
       try {
         // Fetch recommendations
-        const recResponse = await axios.get('http://localhost:5000/api/auth/recommendations', {
+        const recResponse = await axios.get(`${API_URL}/auth/recommendations`, {
           withCredentials: true,
         });
         setRecommendations(recResponse.data.recommendations);
         
         // Fetch body type from profile
-        const profileResponse = await axios.get('http://localhost:5000/api/profile', {
+        const profileResponse = await axios.get(`${API_URL}/auth/profile`, {
           withCredentials: true,
         });
         setBodyType(profileResponse.data.bodyType || 'your body type');
@@ -44,7 +45,7 @@ const Recommendations = () => {
     // Make sure we have the full URL path including the server
     const fullImageUrl = imagePath.startsWith('http') 
       ? imagePath 
-      : `http://localhost:5000/images/${imagePath}`;
+      : `${API_URL.replace(/\/api$/, '')}/images/${imagePath}`;
       return (
       <div className="recommendation-card">
         <div className="recommendation-image">
