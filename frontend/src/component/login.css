@@ -1,0 +1,526 @@
+/* Login page styling */
+.login-container {
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Video background (reusing from home.css) */
+  .video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+  }
+  
+  .video-background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+  }
+  
+  /* Fixed transparent header (reusing from home.css) */
+  .fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .transparent-menubar {
+    background: transparent !important;
+    border: none !important;
+    padding: 0.75rem 2rem;
+  }
+  
+  .brand-logo {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: white !important;
+    text-decoration: none;
+    margin-right: 20px;
+  }
+  
+  /* Login content area */
+  .login-content {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+  }
+  
+  /* Transparent card styling (reusing from home.css with modifications) */
+  .transparent-card.login-card {
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+    border-radius: 12px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2.5rem;
+    color: white;
+    transition: all 0.3s ease;
+    width: 100%;
+  }
+  
+  .transparent-card.login-card:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Login icon */
+  .login-icon-container {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #2196F3 0%, #0D47A1 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    box-shadow: 0 4px 15px rgba(13, 71, 161, 0.4);
+  }
+  
+  .login-icon {
+    font-size: 2.5rem !important;
+    color: white;
+  }
+  
+  /* Login title and subtitle */
+  .login-title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: 700;
+    color: white;
+  }
+  
+  .login-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    opacity: 0.9;
+    color: white;
+  }
+  
+  /* Form styling */
+  .login-form {
+    width: 100%;
+  }
+  
+  /* Input styling */
+  .styled-input {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+    color: white !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 8px !important;
+    padding: 0.75rem 1rem 0.75rem 2.5rem !important;
+    font-size: 1rem !important;
+    transition: all 0.3s ease !important;
+    width:100% !important;
+  }
+  
+  .styled-input:focus {
+    background-color: rgba(255, 255, 255, 0.25) !important;
+    border-color: rgba(33, 150, 243, 0.7) !important;
+    box-shadow: 0 0 0 1px rgba(33, 150, 243, 0.7) !important;
+  }
+  
+  .styled-input::placeholder {
+    color: rgba(255, 255, 255, 0.6) !important;
+  }
+  
+  /* Override PrimeReact floating label */
+  .p-float-label > label {
+    color: rgba(255, 255, 255, 0.8) !important;
+  }
+  
+  .p-float-label > input:focus ~ label,
+  .p-float-label > input.p-filled ~ label {
+    color: #2196F3 !important;
+  }
+
+  /* Position the icons properly */
+.p-input-icon-left > i {
+    left: 1rem !important; /* Adjust icon position */
+  }
+  
+  /* Adjust the floating label position */
+  .p-float-label > label {
+    margin-left: 2.5rem !important; /* Move label to align with text, not with icon */
+  }
+  
+  /* Password styling */
+  .styled-password .p-password-input {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+    color: white !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    
+  }
+
+  .p-float-label {
+    width: 100% !important;
+    display: block !important;
+  }
+  
+  .p-inputtext {
+    width: 100% !important;
+  }
+  
+  /* Password input specific */
+  .styled-password {
+    width: 100% !important;
+    display: block !important;
+  }
+  
+  .styled-password .p-password-input {
+    width: 100% !important;
+  }
+  
+  .p-password .p-password-panel {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  }
+  
+  .p-password-meter {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+  }
+  
+  /* Remember me and forgot password row */
+  .login-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+  }
+  
+  .remember-me {
+    display: flex;
+    align-items: center;
+  }
+  
+  .remember-checkbox {
+    margin-right: 0.5rem;
+  }
+  
+  .remember-label {
+    color: white;
+    cursor: pointer;
+  }
+  
+  .forgot-password {
+    color: #2196F3;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  
+  .forgot-password:hover {
+    color: #64B5F6;
+    text-decoration: underline;
+  }
+  
+  /* Custom button (reusing from home.css) */
+  .custom-button {
+    background: linear-gradient(135deg, #2196F3 0%, #0D47A1 100%) !important;
+    border: none !important;
+    border-radius: 30px !important;
+    padding: 0.75rem 2rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.5px !important;
+    box-shadow: 0 4px 15px rgba(13, 71, 161, 0.4) !important;
+    transition: all 0.3s ease !important;
+  }
+  
+  .custom-button:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 8px 20px rgba(13, 71, 161, 0.6) !important;
+  }
+  
+  /* Divider styling */
+  .login-divider {
+    margin: 2rem 0;
+  }
+  
+  .login-divider .p-divider-content {
+    background-color: transparent !important;
+  }
+  
+  .divider-text {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    padding: 0 0.5rem;
+  }
+  
+  .p-divider.p-divider-horizontal:before {
+    border-top: 1px solid rgba(255, 255, 255, 0.2) !important;
+  }
+  
+  /* Signup option */
+  .signup-option {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .signup-link {
+    color: #2196F3;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 0.3rem;
+    transition: all 0.3s ease;
+  }
+  
+  .signup-link:hover {
+    color: #64B5F6;
+    text-decoration: underline;
+  }
+  
+  /* Responsive styling */
+  @media (max-width: 576px) {
+    .login-content {
+      padding: 1rem;
+    }
+    
+    .transparent-card.login-card {
+      padding: 1.5rem;
+    }
+    
+    .login-title {
+      font-size: 2rem;
+    }
+    
+    .login-subtitle {
+      font-size: 1rem;
+    }
+  }
+
+  /* Measurement Form Specific Styles */
+.body-type-result {
+  text-align: center;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: rgba(33, 150, 243, 0.1);
+  border-radius: 8px;
+  border: 1px solid rgba(33, 150, 243, 0.3);
+}
+
+.body-type-result h3 {
+  color: white;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.body-type-value {
+  color: #2196F3;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* InputNumber specific styling */
+.p-inputnumber {
+  width: 100% !important;
+}
+
+.p-inputnumber-input {
+  width: 100% !important;
+  padding-left: 1rem !important;
+}
+
+/* Remove spinner buttons */
+.p-inputnumber-buttons-stacked .p-inputnumber-input,
+.p-inputnumber-buttons-horizontal .p-inputnumber-input {
+  padding-right: 1rem !important;
+}
+
+.p-inputnumber-button {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border: none !important;
+  color: white !important;
+}
+
+.p-inputnumber-button:hover {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.p-inputnumber-button:focus {
+  box-shadow: none !important;
+}
+
+/* Make sure the input number matches our styled inputs */
+.p-inputnumber-input {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  color: white !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 8px !important;
+  padding: 0.75rem 1rem !important;
+  font-size: 1rem !important;
+  transition: all 0.3s ease !important;
+}
+
+.p-inputnumber-input:enabled:hover {
+  border-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+.p-inputnumber-input:enabled:focus {
+  box-shadow: 0 0 0 1px rgba(33, 150, 243, 0.7) !important;
+  border-color: #2196F3 !important;
+}
+/* Stepper Styles */
+.p-steps {
+  background-color: transparent !important;
+  border: none !important;
+  padding: 1rem 0 !important;
+}
+
+.p-steps .p-steps-item .p-menuitem-link {
+  background: transparent !important;
+}
+
+.p-steps .p-steps-item .p-steps-number {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: white !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.p-steps .p-steps-item .p-steps-title {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.p-steps .p-steps-item.p-highlight .p-steps-number {
+  background: linear-gradient(135deg, #2196F3 0%, #0D47A1 100%) !important;
+  color: white !important;
+}
+
+.p-steps .p-steps-item.p-highlight .p-steps-title {
+  color: white !important;
+  font-weight: 600;
+}
+
+/* Form Navigation Buttons */
+.flex.justify-content-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex.justify-content-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.flex.justify-content-center {
+  display: flex;
+  justify-content: center;
+}
+
+/* Text button style */
+.p-button-text.text-white {
+  color: white !important;
+}
+
+.p-button-text.text-white:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+/* Message styles */
+.message-container {
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.success-message {
+  background-color: rgba(102, 187, 106, 0.2);
+  border: 1px solid rgba(102, 187, 106, 0.5);
+  color: #66BB6A;
+}
+
+.error-message {
+  background-color: rgba(239, 83, 80, 0.2);
+  border: 1px solid rgba(239, 83, 80, 0.5);
+  color: #EF5350;
+}
+
+/* Lock icon specific */
+.pi-lock.login-icon {
+  font-size: 2.2rem !important;
+}
+
+/* Link styles */
+.text-primary {
+  color: #2196F3 !important;
+}
+
+.no-underline {
+  text-decoration: none;
+}
+
+.hover-underline:hover {
+  text-decoration: underline;
+}
+/* Shield icon specific */
+.pi-shield.login-icon {
+  font-size: 2.2rem !important;
+}
+
+/* Password input specific styling */
+.styled-password .p-password-input {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  color: white !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 8px !important;
+  padding: 0.75rem 1rem 0.75rem 2.5rem !important;
+  font-size: 1rem !important;
+  transition: all 0.3s ease !important;
+  width: 100% !important;
+}
+
+.styled-password .p-password-input:enabled:hover {
+  border-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+.styled-password .p-password-input:enabled:focus {
+  box-shadow: 0 0 0 1px rgba(33, 150, 243, 0.7) !important;
+  border-color: #2196F3 !important;
+}
+
+.styled-password .p-password-toggle {
+  color: white !important;
+  right: 1rem !important;
+}
+
+/* Message styles (reusing from forgot password) */
+.message-container {
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.success-message {
+  background-color: rgba(102, 187, 106, 0.2);
+  border: 1px solid rgba(102, 187, 106, 0.5);
+  color: #66BB6A;
+}
+
+.error-message {
+  background-color: rgba(239, 83, 80, 0.2);
+  border: 1px solid rgba(239, 83, 80, 0.5);
+  color: #EF5350;
+}

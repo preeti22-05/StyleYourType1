@@ -1,0 +1,121 @@
+/* Auth Container */
+.auth-container {
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+  }
+  
+  .auth-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+  }
+  
+  /* Auth Card */
+  .transparent-card.auth-card {
+    width: 100%;
+    max-width: 500px;
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  }
+  
+  /* Auth Icons */
+  .auth-icon-container {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #2196F3 0%, #0D47A1 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    box-shadow: 0 4px 15px rgba(13, 71, 161, 0.4);
+  }
+  
+  .auth-icon {
+    font-size: 2.5rem !important;
+    color: white;
+  }
+  
+  /* Auth Titles */
+  .auth-title {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .auth-subtitle {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 2rem;
+  }
+  
+  /* Profile Display */
+  .profile-display {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: white;
+  }
+  
+  .profile-display h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .profile-info {
+    margin-bottom: 1.5rem;
+  }
+  
+  .profile-info p {
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .profile-info span {
+    font-weight: 600;
+    opacity: 0.8;
+  }
+  
+  /* Message Styles */
+  .success-message {
+    background-color: rgba(102, 187, 106, 0.2);
+    border: 1px solid rgba(102, 187, 106, 0.5);
+    color: #66BB6A;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .error-message {
+    background-color: rgba(239, 83, 80, 0.2);
+    border: 1px solid rgba(239, 83, 80, 0.5);
+    color: #EF5350;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .auth-content {
+      padding: 1rem;
+    }
+    
+    .auth-title {
+      font-size: 1.8rem;
+    }
+    
+    .auth-subtitle {
+      font-size: 1rem;
+    }
+  }

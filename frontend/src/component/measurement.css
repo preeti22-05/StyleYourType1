@@ -1,0 +1,154 @@
+/* Measurement Container */
+.measurement-container {
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+  }
+  
+  .measurement-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+  }
+  
+  .transparent-card.measurement-card {
+    width: 100%;
+    max-width: 800px;
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  }
+  
+  /* Header Styles */
+  .measurement-icon-container {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #2196F3 0%, #0D47A1 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    box-shadow: 0 4px 15px rgba(13, 71, 161, 0.4);
+  }
+  
+  .measurement-icon {
+    font-size: 2.5rem !important;
+    color: white;
+  }
+  
+  .measurement-title {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .measurement-subtitle {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 2rem;
+  }
+  
+  /* Results Section */
+  .body-type-result {
+    padding: 1.5rem;
+    background-color: rgba(33, 150, 243, 0.1);
+    border-radius: 8px;
+    border: 1px solid rgba(33, 150, 243, 0.3);
+    margin-bottom: 1.5rem;
+  }
+  
+  .body-type-result h3 {
+    color: white;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+  }
+  
+  .body-type-value {
+    color: #2196F3;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .body-type-description {
+    margin-top: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-style: italic;
+  }
+  
+  /* Next Steps Section */
+  .next-steps {
+    text-align: center;
+    color: white;
+  }
+  
+  .next-steps h3 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .step-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .step-card {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    padding: 1.5rem;
+  }
+  
+  .step-card:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.15) !important;
+    border-color: rgba(33, 150, 243, 0.5) !important;
+  }
+  
+  .step-icon {
+    font-size: 2.5rem !important;
+    color: #2196F3;
+    margin-bottom: 1rem;
+  }
+  
+  .step-card h4 {
+    color: white;
+    margin-bottom: 0.5rem;
+  }
+  
+  .step-card p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1.5rem;
+  }
+  
+  .small-button {
+    padding: 0.5rem 1rem !important;
+    font-size: 0.9rem !important;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .measurement-content {
+      padding: 1rem;
+    }
+    
+    .step-options {
+      grid-template-columns: 1fr;
+    }
+    
+    .measurement-title {
+      font-size: 1.8rem;
+    }
+    
+    .measurement-subtitle {
+      font-size: 1rem;
+    }
+  }

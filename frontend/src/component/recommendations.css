@@ -1,0 +1,184 @@
+/* Recommendations Page Styles */
+.recommendations-container {
+  position: relative;
+  min-height: 100vh;
+  color: white;
+}
+
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.video-background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.recommendations-content {
+  padding: 100px 20px 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.recommendations-card {
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  padding: 30px;
+  backdrop-filter: blur(10px);
+}
+
+.recommendations-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.outfit-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.outfit-card {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  transition: transform 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.outfit-card:hover {
+  transform: translateY(-5px);
+}
+
+.outfit-image-container {
+  height: 400px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px 8px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.outfit-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.image-error-placeholder {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.image-error-placeholder i {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.outfit-card:hover .outfit-image {
+  transform: scale(1.05);
+}
+
+.outfit-details {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.outfit-details h3 {
+  margin-top: 0;
+  color: #fff;
+}
+
+.outfit-meta {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.event-badge, .body-type-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.event-badge {
+  background: rgba(100, 181, 246, 0.2);
+  color: #64b5f6;
+}
+
+.body-type-badge {
+  background: rgba(76, 175, 80, 0.2);
+  color: #4caf50;
+}
+
+.outfit-description {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 15px;
+  flex-grow: 1;
+}
+
+.outfit-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.no-recommendations {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.no-recommendations i {
+  font-size: 3rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 20px;
+}
+
+.no-recommendations h3 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.no-recommendations p {
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .outfit-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .outfit-image-container {
+    height: 300px;
+  }
+  
+  .recommendations-content {
+    padding: 80px 15px 30px;
+  }
+}
